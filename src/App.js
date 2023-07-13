@@ -1,6 +1,7 @@
 import React, {Component} from "react";
 import InputArea from "./components/InputArea.js";
 import CVDisplay from "./components/CVDisplay.js";
+import "./styles/App.css";
 
 class App extends Component{
   constructor(){
