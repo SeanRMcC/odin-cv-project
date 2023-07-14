@@ -12,9 +12,30 @@ class InputArea extends Component{
     render(){
         return (
             <div className="forms">
-                <GeneralInfo />
-                <EducationalInfo />
-                <WorkInfo />
+                <GeneralInfo
+                    name={this.props.name}
+                    email={this.props.email}
+                    phone={this.props.phone}
+                    updateName={this.props.updateName}
+                    updateEmail={this.props.updateEmail}
+                    updatePhone={this.props.updatePhone}
+                />
+                <EducationalInfo
+                    school={this.props.school}
+                    concentration={this.props.concentration}
+                    educationDate={this.props.educationDate}
+                    updateSchool={this.props.updateSchool}
+                    updateConcentration={this.props.updateConcentration}
+                    updateEducationDate={this.props.updateEducationDate}
+                />
+                <WorkInfo 
+                    company={this.props.company}
+                    position={this.props.position}
+                    workDate={this.props.workDate}
+                    updateCompany={this.props.updateCompany}
+                    updatePosition={this.props.updatePosition}
+                    updateWorkDate={this.props.updateWorkDate}
+                />
             </div>
         );
     }
