@@ -1,5 +1,6 @@
 import React, {Component} from "react";
 import GeneralInfo from "./GeneralInfo.js";
+import EducationalInfo from "./EducationalInfo.js";
 import "./../styles/App.css";
 
 class InputArea extends Component{
@@ -9,8 +10,9 @@ class InputArea extends Component{
 
     render(){
         return (
-            <div>
+            <div className="forms">
                 <GeneralInfo />
+                <EducationalInfo />
             </div>
         );
     }
