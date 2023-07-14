@@ -16,7 +16,7 @@ class EducationalInfo extends Component{
                 <input type="text" id="concentration" name="concentration" value={this.props.concentration} onChange={this.props.updateConcentration}/>
                 <label htmlFor="date">Date Range</label>
                 <input type="text" id="date" name="date" value={this.props.educationDate} onChange={this.props.updateEducationDate}/>
-                <button>Enter</button>
+                <button onClick={this.props.enterEducation}>Enter</button>
             </div>
         );
     }

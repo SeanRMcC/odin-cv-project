@@ -16,7 +16,7 @@ class WorkInfo extends Component{
                 <input type="text" id="position" name="position" value={this.props.position} onChange={this.props.updatePosition}/>
                 <label htmlFor="date-employed">Date</label>
                 <input type="text" id="date-employed" name="date-employed" value={this.props.workDate} onChange={this.props.updateWorkDate}/>
-                <button>Enter</button>
+                <button onClick={this.props.enterWork}>Enter</button>
             </div>
         );
     }

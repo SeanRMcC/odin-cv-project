@@ -19,6 +19,7 @@ class InputArea extends Component{
                     updateName={this.props.updateName}
                     updateEmail={this.props.updateEmail}
                     updatePhone={this.props.updatePhone}
+                    enterGeneral={this.props.enterGeneral}
                 />
                 <EducationalInfo
                     school={this.props.school}
@@ -27,6 +28,7 @@ class InputArea extends Component{
                     updateSchool={this.props.updateSchool}
                     updateConcentration={this.props.updateConcentration}
                     updateEducationDate={this.props.updateEducationDate}
+                    enterEducation={this.props.enterEducation}
                 />
                 <WorkInfo 
                     company={this.props.company}
@@ -35,6 +37,7 @@ class InputArea extends Component{
                     updateCompany={this.props.updateCompany}
                     updatePosition={this.props.updatePosition}
                     updateWorkDate={this.props.updateWorkDate}
+                    enterWork={this.props.enterWork}
                 />
             </div>
         );

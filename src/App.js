@@ -22,6 +22,23 @@ class App extends Component{
         company: "",
         position: "",
         date: ""
+      },
+      cv: {
+        general: {
+          name: "Your Name",
+          email: "youremail@placeholder.net",
+          phone: "XXX-XXX-XXXX"
+        },
+        education: {
+          school: "Swag University",
+          concentration: "Zaza studies",
+          date: "4/20/20XX-6/9/20XX"
+        },
+        work: {
+          company: "Cool Corp",
+          position: "Prompt Engineer",
+          date: "3/4/20XX-4/5/20XX"
+        }
       }
     };
     this.updateName = this.updateName.bind(this);
@@ -33,7 +50,49 @@ class App extends Component{
     this.updateCompany = this.updateCompany.bind(this);
     this.updatePosition = this.updatePosition.bind(this);
     this.updateWorkDate = this.updateWorkDate.bind(this);
+    this.enterGeneral = this.enterGeneral.bind(this);
+    this.enterEducation = this.enterEducation.bind(this);
+    this.enterWork = this.enterWork.bind(this);
 
+  }
+
+  enterGeneral(){
+    this.setState({
+      general: this.state.general,
+      education: this.state.education,
+      work: this.state.work,
+      cv: {
+        general: this.state.general,
+        education: this.state.cv.education,
+        work: this.state.cv.work
+      }
+    })
+  }
+
+  enterEducation(){
+    this.setState({
+      general: this.state.general,
+      education: this.state.education,
+      work: this.state.work,
+      cv: {
+        general: this.state.cv.general,
+        education: this.state.education,
+        work: this.state.cv.work
+      }
+    })
+  }
+
+  enterWork(){
+    this.setState({
+      general: this.state.general,
+      education: this.state.education,
+      work: this.state.work,
+      cv: {
+        general: this.state.cv.general,
+        education: this.state.cv.education,
+        work: this.state.work
+      }
+    })
   }
 
   updateName(e){
@@ -44,7 +103,8 @@ class App extends Component{
         phone: this.state.general.phone
       },
       education: this.state.education,
-      work: this.state.work
+      work: this.state.work,
+      cv: this.state.cv
     });
   }
 
@@ -56,7 +116,8 @@ class App extends Component{
         phone: this.state.general.phone
       },
       education: this.state.education,
-      work: this.state.work
+      work: this.state.work,
+      cv: this.state.cv
     });
   }
 
@@ -68,7 +129,8 @@ class App extends Component{
         phone: e.target.value
       },
       education: this.state.education,
-      work: this.state.work
+      work: this.state.work,
+      cv: this.state.cv
     });
   }
 
@@ -80,7 +142,8 @@ class App extends Component{
         concentration: this.state.education.concentration,
         date: this.state.education.date
       },
-      work: this.state.work
+      work: this.state.work,
+      cv: this.state.cv
     });
   }
 
@@ -92,7 +155,8 @@ class App extends Component{
         concentration: e.target.value,
         date: this.state.education.date
       },
-      work: this.state.work
+      work: this.state.work,
+      cv: this.state.cv
     });
   }
 
@@ -104,7 +168,8 @@ class App extends Component{
         concentration: this.state.education.concentration,
         date: e.target.value
       },
-      work: this.state.work
+      work: this.state.work,
+      cv: this.state.cv
     });
   }
 
@@ -116,7 +181,8 @@ class App extends Component{
         company: e.target.value,
         position: this.state.work.position,
         date: this.state.work.date
-      }
+      },
+      cv: this.state.cv
     });
   }
 
@@ -128,7 +194,8 @@ class App extends Component{
         company: this.state.work.company,
         position: e.target.value,
         date: this.state.work.date
-      }
+      },
+      cv: this.state.cv
     });
   }
 
@@ -140,7 +207,8 @@ class App extends Component{
         company: this.state.work.company,
         position: this.state.work.position,
         date: e.target.value
-      }
+      },
+      cv: this.state.cv
     });
   }
 
@@ -155,20 +223,32 @@ class App extends Component{
           updateName={this.updateName}
           updateEmail={this.updateEmail}
           updatePhone={this.updatePhone}
+          enterGeneral={this.enterGeneral}
           school={this.state.education.school}
           concentration={this.state.education.concentration}
           educationDate={this.state.education.date}
           updateSchool={this.updateSchool}
           updateConcentration={this.updateConcentration}
           updateEducationDate={this.updateEducationDate}
+          enterEducation={this.enterEducation}
           company={this.state.work.company}
           position={this.state.work.position}
           workDate={this.state.work.date}
           updateCompany={this.updateCompany}
           updatePosition={this.updatePosition}
           updateWorkDate={this.updateWorkDate}
+          enterWork={this.enterWork}
         />
         <CVDisplay />
+        <div>{this.state.cv.general.name}</div>
+        <div>{this.state.cv.general.email}</div>
+        <div>{this.state.cv.general.phone}</div>
+        <div>{this.state.cv.education.school}</div>
+        <div>{this.state.cv.education.concentration}</div>
+        <div>{this.state.cv.education.date}</div>
+        <div>{this.state.cv.work.company}</div>
+        <div>{this.state.cv.work.position}</div>
+        <div>{this.state.cv.work.date}</div>
       </>
     );
   }

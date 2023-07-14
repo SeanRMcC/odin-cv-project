@@ -16,7 +16,7 @@ class GeneralInfo extends Component{
                 <input type="email" id="email" name="email" value={this.props.email} onChange={this.props.updateEmail}/>
                 <label htmlFor="phone">Phone</label>
                 <input type="tel" id="phone" name="phone" value={this.props.value} onChange={this.props.updatePhone}/>
-                <button>Enter</button>
+                <button onClick={this.props.enterGeneral}>Enter</button>
             </div>
         );
     }
