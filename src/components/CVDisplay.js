@@ -8,13 +8,19 @@ function CVDisplay(props){
     return (
         <div>
             <CVGeneral 
-
+                name={props.name}
+                email={props.email}
+                phone={props.phone}
             />
             <CVEducation
-
+                school={props.school}
+                concentration={props.concentration}
+                date={props.educationDate}
             />
             <CVWork
-
+                company={props.company}
+                position={props.position}
+                date={props.workDate}
             />
         </div>
     );

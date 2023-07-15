@@ -30,14 +30,14 @@ class App extends Component{
           phone: "XXX-XXX-XXXX"
         },
         education: {
-          school: "Swag University",
-          concentration: "Zaza studies",
-          date: "4/20/20XX-6/9/20XX"
+          school: "Your School",
+          concentration: "Your Concentration",
+          date: "XX/XX/XXXX-XX/XX/XXXX"
         },
         work: {
-          company: "Cool Corp",
-          position: "Prompt Engineer",
-          date: "3/4/20XX-4/5/20XX"
+          company: "Your Company",
+          position: "Your Position",
+          date: "XX/XX/XXXX-XX/XX/XXXX"
         }
       }
     };
