@@ -1,16 +1,23 @@
-import React, {Component} from "react";
+import React from "react";
+import CVGeneral from "./CVGeneral.js"
+import CVEducation from "./CVEducation.js"
+import CVWork from "./CVWork.js"
 import "./../styles/App.css";
 
-class CVDisplay extends Component{
-    constructor(props){
-        super(props);
-    }
+function CVDisplay(props){
+    return (
+        <div>
+            <CVGeneral 
 
-    render(){
-        return (
-            <div>CV Display</div>
-        );
-    }
+            />
+            <CVEducation
+
+            />
+            <CVWork
+
+            />
+        </div>
+    );
 }
 
 export default CVDisplay;

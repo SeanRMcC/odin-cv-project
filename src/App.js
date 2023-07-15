@@ -239,16 +239,17 @@ class App extends Component{
           updateWorkDate={this.updateWorkDate}
           enterWork={this.enterWork}
         />
-        <CVDisplay />
-        <div>{this.state.cv.general.name}</div>
-        <div>{this.state.cv.general.email}</div>
-        <div>{this.state.cv.general.phone}</div>
-        <div>{this.state.cv.education.school}</div>
-        <div>{this.state.cv.education.concentration}</div>
-        <div>{this.state.cv.education.date}</div>
-        <div>{this.state.cv.work.company}</div>
-        <div>{this.state.cv.work.position}</div>
-        <div>{this.state.cv.work.date}</div>
+        <CVDisplay
+          name={this.state.cv.general.name}
+          email={this.state.cv.general.email}
+          phone={this.state.cv.general.phone}
+          school={this.state.cv.education.school}
+          concentration={this.state.cv.education.concentration}
+          educationDate={this.state.cv.education.date}
+          company={this.state.cv.work.company}
+          position={this.state.cv.work.position}
+          workDate={this.state.cv.work.date}
+        />
       </>
     );
   }
