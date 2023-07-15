@@ -6,22 +6,25 @@ import "./../styles/App.css";
 
 function CVDisplay(props){
     return (
-        <div>
-            <CVGeneral 
-                name={props.name}
-                email={props.email}
-                phone={props.phone}
-            />
-            <CVEducation
-                school={props.school}
-                concentration={props.concentration}
-                date={props.educationDate}
-            />
-            <CVWork
-                company={props.company}
-                position={props.position}
-                date={props.workDate}
-            />
+        <div className="cv">
+            <h1>Curriculum Vitae</h1>
+            <div className="info-wrapper"> 
+                <CVGeneral 
+                    name={props.name}
+                    email={props.email}
+                    phone={props.phone}
+                />
+                <CVEducation
+                    school={props.school}
+                    concentration={props.concentration}
+                    date={props.educationDate}
+                />
+                <CVWork
+                    company={props.company}
+                    position={props.position}
+                    date={props.workDate}
+                />
+            </div>
         </div>
     );
 }

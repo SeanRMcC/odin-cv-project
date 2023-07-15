@@ -215,7 +215,7 @@ class App extends Component{
   render(){
     return (
       <>
-        <h1>CV Application</h1> 
+        <h1 className="title">CV Application</h1> 
         <InputArea
           name={this.state.general.name}
           email={this.state.general.email}

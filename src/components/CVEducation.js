@@ -3,8 +3,8 @@ import "./../styles/App.css";
 
 function CVEducation(props){
     return (
-        <div>
-            <div>School: {props.school}</div>
+        <div className="cv-section">
+            <div>{props.school}</div>
             <div>Concentration: {props.concentration}</div>
             <div>Date of study: {props.date}</div>
         </div>
